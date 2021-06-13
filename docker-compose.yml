@@ -19,6 +19,4 @@ services:
       - 5000:5000
     depends_on: 
       - rabbitmq
-    environment: 
-      - FLASK_APP=mktask
-    entrypoint: ["flask", "run"]
+    entrypoint: ["python3", "mktask.py"]

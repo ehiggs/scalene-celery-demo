@@ -16,3 +16,5 @@ def submit_cpu():
     app.loadsacpu.apply_async()
     return 'OK'
 
+if __name__ == '__main__':
+    flask_app.run(host='0.0.0.0')
