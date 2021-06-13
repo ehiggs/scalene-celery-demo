@@ -12,6 +12,12 @@ services:
     depends_on: 
       - rabbitmq
     entrypoint: ["celery", "-A", "app", "worker"]
+    #entrypoint: ["scalene" "...", "...", "celery", "-A", "app", "worker"]
+    # or... 
+    # 1. ["sleep", "1000000"] 
+    # 2. docker exec -it <image-name> bash; 
+    # 3. run the scalene command while submitting tasks
+    # 4. ^C it and get the report out.
 
   celery-taskgen:
     build: .
